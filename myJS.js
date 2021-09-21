@@ -5,7 +5,7 @@
 
 let count = 0;
 let box = document.getElementById('color-block');
-box.addEventListener('click', changeColor());
+box.addEventListener('click', changeColor);
 
 /*
 * Then write a function that changes the text and the color inside the div
@@ -14,19 +14,18 @@ box.addEventListener('click', changeColor());
 
 function changeColor(){
     count++;
-    console.log(count);
     //Write a condition determine what color it should be changed to
     if(count == 1){
         //change the background color using JS
-        box.style.backgroundColor = 'lightgreen';
+        box.style.backgroundColor = '#F4EEFF';
         //Change the text of the color using the span id color-name
-        document.getElementById('color-name').textContent = box.style.backgroundColor;
+        document.getElementById('color-name').textContent = '#F4EEFF';
     }
     else{
         //change the background color using JS
         box.style.backgroundColor = '#F08080';
         //Change the text of the color using the span id color-name
-        document.getElementById('color-name').textContent = box.style.backgroundColor;
+        document.getElementById('color-name').textContent = '#F08080';
     }
 }
 
@@ -38,7 +37,7 @@ function changeColor(){
 */
 
 convert_button = document.getElementById('convertbtn');
-convert_button.addEventListener('click', convertTemp());
+convert_button.addEventListener('click', convertTemp);
 
 /*
 * Then write a function that calculates Fahrenheit to Celsius and display it on the webpage
@@ -51,8 +50,5 @@ function convertTemp(){
     temperature_C = (temperature_F - 32) * 5 / 9;
 
     //Send the calculated temperature to HTML
-    document.getElementById('c-output').textContent = temperature_C;
-
+    if(!isNaN(temperature_C)) document.getElementById('c-output').textContent = temperature_C;
 }
-
-
