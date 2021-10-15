@@ -3,7 +3,6 @@
 *
 */
 
-let count = 0;
 let box = document.getElementById('color-block');
 box.addEventListener('click', changeColor);
 
@@ -13,17 +12,16 @@ box.addEventListener('click', changeColor);
 */
 
 function changeColor(){
-    count++;
     //Write a condition determine what color it should be changed to
-    if(count == 1){
+    if(!box.classList.contains('purple')){
         //change the background color using JS
-        box.style.backgroundColor = '#F4EEFF';
+        box.classList.add('purple');
         //Change the text of the color using the span id color-name
         document.getElementById('color-name').textContent = '#F4EEFF';
     }
     else{
         //change the background color using JS
-        box.style.backgroundColor = '#F08080';
+        box.classList.remove('purple');
         //Change the text of the color using the span id color-name
         document.getElementById('color-name').textContent = '#F08080';
     }

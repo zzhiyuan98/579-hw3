@@ -14,3 +14,7 @@ body{
     padding-top: 95px;
     padding-left: 15px;
 }
+
+#color-block.purple{
+    background-color: #F4EEFF;
+}
